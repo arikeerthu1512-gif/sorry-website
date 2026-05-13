@@ -66,8 +66,8 @@ body{
     position:relative;
     z-index:10;
     width:90%;
-    max-width:650px;
-    padding:50px;
+    max-width:700px;
+    padding:60px 40px;
     border-radius:35px;
     background:rgba(255,255,255,0.18);
     backdrop-filter:blur(15px);
@@ -75,6 +75,7 @@ body{
     box-shadow:0 15px 40px rgba(0,0,0,0.2);
     text-align:center;
     animation:fadeIn 2s ease;
+    overflow:hidden;
 }
 
 @keyframes fadeIn{
@@ -90,29 +91,35 @@ body{
 
 h1{
     font-family:'Dancing Script',cursive;
-    font-size:70px;
+    font-size:65px;
     color:white;
-    margin-bottom:20px;
+    margin-bottom:25px;
+    padding:0 10px;
     text-shadow:0 5px 15px rgba(0,0,0,0.2);
+    line-height:1.2;
 }
 
 .message{
     color:white;
-    font-size:20px;
+    font-size:22px;
     line-height:1.9;
-    margin-bottom:35px;
+    margin-bottom:30px;
     font-weight:300;
+    padding:0 10px;
 }
 
 /* Typing Effect */
 
 .typing{
-    border-right:3px solid white;
-    white-space:nowrap;
-    overflow:hidden;
-    width:0;
-    animation:typing 4s steps(40,end) forwards,
-              blink .8s infinite;
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+    overflow: visible;
+    border-right: 3px solid white;
+    padding-right: 5px;
+    line-height: 1.8;
+    word-wrap: break-word;
+    animation: blink .8s infinite;
 }
 
 @keyframes typing{
